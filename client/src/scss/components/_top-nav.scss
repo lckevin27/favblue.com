@@ -6,7 +6,7 @@ nav.top-nav {
   top: 0;
 
   &>div {
-    padding: 50px 250px;
+    padding: 50px 10%;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -34,7 +34,22 @@ nav.top-nav {
         }
       }
 
-      li:last-child {
+      li.open-nav {
+        display: none;
+
+        a:hover {
+          border-bottom: none;
+        }
+  
+        div {
+          width: 30px;
+          height: 4px;
+          background-color: black;
+          margin: 5px 0;
+        }
+      }
+
+      li.lang-switch {
         margin-left: 50px;
       }
     }
@@ -47,4 +62,40 @@ nav.top-nav {
       }
     }
   }
+
+  @media only screen and (max-width: 1680px) {
+    &>div {
+      padding: 50px 8%;
+    }
+  }
+
+  @media only screen and (max-width: 1480px) {
+    &>div {
+      ul.nav-links {
+        li {
+          display: none;
+        }
+
+        li.open-nav {
+          display: inline-block;
+          
+          a {
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: 1000px) {
+    &>div {
+      padding: 20px 8%;
+
+      .logo-main {
+        a {
+          font-size: 300%;
+        }
+      }
+    }
+	}
 }

@@ -8,7 +8,14 @@
               <li><router-link to="/cn/ife">Insightful Front-End</router-link></li>
               <li><router-link to="/about">About</router-link></li>
               <li><a href="javascript:void(0)" v-on:click="gotoFooter">Contacts</a></li>
-              <li><router-link to="/tocn">中文</router-link></li>
+              <li class="lang-switch"><router-link to="/tocn">中文</router-link></li>
+              <li class="open-nav" >
+                <a href="javascript:void(0)" v-on:click="openNav()">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </a>
+              </li>
           </ul>
       </div>
       <div v-else class="top-nav-cn">
@@ -19,7 +26,14 @@
               <li><router-link to="/cn/ife">洞察前端</router-link></li>
               <li><router-link to="/cn/about">关于</router-link></li>
               <li><a href="javascript:void(0)" v-on:click="gotoFooter">联系我</a></li>
-              <li><router-link to="/toen">EN</router-link></li>
+              <li class="lang-switch"><router-link to="/toen">EN</router-link></li>
+              <li class="open-nav">
+                <a href="javascript:void(0)" v-on:click="openNav()">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </a>
+              </li>
           </ul>
       </div>
     </nav>

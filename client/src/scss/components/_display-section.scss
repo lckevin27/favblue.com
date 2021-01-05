@@ -1,70 +1,91 @@
 .display-section {
-    padding: 10% 20%;
-    font-size: 120%;
+  padding: 10% 20%;
+  font-size: 120%;
 
-    .title-wrap {
-        margin-bottom: 50px;
-        width: 100%;
-        margin-bottom: 80px;
+  .title-wrap {
+    width: 100%;
+    margin-bottom: 80px;
+
+    h2 {
+      overflow: hidden;
+      text-align: center;
+      letter-spacing: 10px;
+      font-weight: 400;
+      font-size: 200%;
+    }
     
-        h2 {
-          overflow: hidden;
-          text-align: center;
-          letter-spacing: 10px;
-          font-weight: 400;
-          font-size: 200%;
+    h2:before,
+    h2:after {
+      background-color: $theme-brown;
+      content: "";
+      display: inline-block;
+      height: 1px;
+      position: relative;
+      vertical-align: middle;
+      width: 10%;
+    }
+    
+    h2:before {
+      right: 0.5em;
+      margin-left: -50%;
+    }
+    
+    h2:after {
+      left: 0.5em;
+      margin-right: -50%;
+    }
+}
+
+  .content-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &> div {
+        margin: 0 5%;
+      }
+
+      .caption-container {
+        flex-basis: 45%;
+        p {
+          font-weight: 300;
+          line-height: 200%;
+          margin-bottom: 20px;
         }
-        
-        h2:before,
-        h2:after {
-          background-color: $theme-brown;
-          content: "";
-          display: inline-block;
-          height: 1px;
-          position: relative;
-          vertical-align: middle;
-          width: 10%;
+
+        p:last-child {
+          margin-bottom: 0;
         }
-        
-        h2:before {
-          right: 0.5em;
-          margin-left: -50%;
+      }
+
+      .img-container {
+        flex-basis: 55%;
+
+        img {
+          width: 100%;
         }
-        
-        h2:after {
-          left: 0.5em;
-          margin-right: -50%;
-        }
+      }
+    }
+
+  @media only screen and (max-width: 1680px) {
+    padding: 10% 15%;
+  }
+
+  @media only screen and (max-width: 1480px) {
+    padding: 8% 10%;
+  }
+
+  @media only screen and (max-width: 1000px) {
+    .title-wrap {
+      margin-bottom: 40px;
     }
 
     .content-wrapper {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+      flex-direction: column;
 
-        &> div {
-            margin: 0 70px;
-        }
-
-        .caption-container {
-            flex-basis: 45%;
-            p {
-                font-weight: 300;
-                line-height: 40px;
-                margin-bottom: 20px;
-            }
-
-            p:last-child {
-              margin-bottom: 0;
-            }
-        }
-    
-        .img-container {
-            flex-basis: 55%;
-    
-            img {
-                width: 100%;
-            }
-        }
+      &> div:first-child {
+        margin-bottom: 10%;
+      }
     }
+  }
 }

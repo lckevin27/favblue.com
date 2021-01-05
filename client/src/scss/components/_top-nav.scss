@@ -1,0 +1,50 @@
+nav.top-nav {
+  font-family: $banner, sans-serif;
+  background-color: transparent;
+  width: 100%;
+  position: absolute;
+  top: 0;
+
+  &>div {
+    padding: 50px 250px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    ul.nav-links {
+      float: right;
+      height: 50px;
+  
+      li {
+        display: inline-block;
+        
+        a {
+          display: block;
+          margin: 0 25px;
+          padding: 10px 5px;
+          color: black;
+          font-size: 120%;
+          transition: 0.3s;
+        }
+  
+        a:hover {
+          color: $logo-blue;
+          border-bottom: 3px $logo-blue solid;
+        }
+      }
+
+      li:last-child {
+        margin-left: 50px;
+      }
+    }
+  
+    .logo-main {
+      float: left;
+  
+      a{
+        font-size: 400%;
+      }
+    }
+  }
+}

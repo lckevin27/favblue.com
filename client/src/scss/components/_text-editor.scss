@@ -1,0 +1,39 @@
+.editor {
+    .input-area {
+        display: inline-flex;
+        width: 100%;
+        align-items: center;
+        margin-top: 80px;
+
+        .rich-editor {
+            flex-basis: 60%;
+            flex-shrink: 0;
+            flex-grow: 0;
+
+            .w-e-text {
+                overflow-wrap: break-word;
+            }
+        }
+    
+        form {
+            flex-basis: 30%;
+
+            a {
+                display: block;
+                text-align: center;
+                border: 2px solid $logo-blue;
+                
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+    
+            input, select, a {
+                margin: 5px 0 15px 0;
+                padding: 10px;
+                width: 80%;
+                box-sizing:content-box;
+            }
+        }
+    }
+}

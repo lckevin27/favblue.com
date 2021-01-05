@@ -1,0 +1,20 @@
+footer {
+    font-family: $secondary-font, sans-serif;
+    letter-spacing: 1px;
+    border-top: 1px solid #ddd;
+    padding: 3% 0 6% 0;
+    margin: 0 5%;
+    text-align: center;
+
+    #footer-logo {
+        font-size: 200%;
+    }
+
+    .social-links {
+        margin: 20px 0 30px 0;
+
+        a {
+            margin: 0 20px;
+        }
+    }
+}

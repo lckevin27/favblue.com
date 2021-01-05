@@ -1,0 +1,32 @@
+.cn-font-overwriter {
+    font-family: $cn-font, sans-serif;
+
+    .display-section-cn {
+        .title-wrap {
+            h2:before,
+            h2:after {
+              width: 20%;
+            }
+        }
+
+        .content-wrapper {
+            .caption-container {
+                p {
+                    font-weight: 300;
+                    line-height: 40px;
+                    letter-spacing: 1px;
+                }
+            }
+        }
+    }
+}
+
+.about-cn {
+    font-weight: 100;
+}
+
+
+.hero-text-cn {
+    font-family: $banner, sans-serif;
+    font-weight: 700;
+}

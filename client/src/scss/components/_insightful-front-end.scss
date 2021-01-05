@@ -1,0 +1,508 @@
+.insightful-front-end {
+    width: 100%;
+    height: 100vh;
+    display: inline-flex;
+
+    .code-example, pre {
+        margin: 10px 0;
+    }
+
+    nav.IFENavbar {
+        flex-basis: 20%;
+        overflow-y: scroll;
+        padding: 5px 10px;
+        font-size: 120%;
+
+        img {
+            width: 60%;
+            margin-top: 10%;
+        }
+
+        a:hover {
+            cursor: pointer;
+        }
+
+        a.btn-del {
+            color: red;
+            margin-left: 20px;
+        }
+
+        .navbar-logo {
+            display: block;
+            text-align: center;
+        }
+
+        h4 {
+            text-align: center;
+            padding: 0 0 10px 0;
+        }
+
+        ul.outer-list {
+            padding: 0 40px;
+
+            &>li{
+                padding-bottom: 5px;
+                padding-top: 10px;
+            }
+
+            ul {
+                margin-left: 20px;
+
+                li { 
+                    padding-bottom: 10px;
+    
+                    a {
+                        font-size: 85%;
+                    }
+                }
+            }
+        }
+
+        .btn-edit {
+            display: block;
+            text-align: center;
+            font-size: 120%;
+            color: red;
+            border: 3px solid red;
+            padding: 5px;
+            width: 40%;
+            margin: 0 auto;
+        }
+    }
+
+    .IFEContent {
+        font-size: 120%;
+        flex-basis: 80%;
+        overflow-y: scroll;
+        padding: 2% 20% 2% 3%;
+        font-weight: 300;
+        line-height: 30px;
+
+        h4 {
+            font-size: 115%;
+            margin-bottom: 10px;
+        }
+
+        // start of example code
+
+        .code-example {
+            border: 1px solid #CCC;
+            box-shadow: 2px 2px 10px #CCC;
+            padding: 2% 5%;
+            border-radius: 10px;
+            overflow: hidden;
+
+            // example 2.8 transform
+
+            #example-translate-1, #example-transform-1, #example-transform-2, #example-transform-3, #example-transform-4, #example-transform-5, #example-transform-6, #example-transform-7 {
+                width: 100px;
+                height: 100px;
+                background-color: red;
+                transition: transform 2s;
+            }
+
+            #example-translate-1:hover {
+                transform: translateX(300px);
+            }
+
+            #example-transform-1:hover {
+                transform: translate(150px, 50%);
+            }
+
+            #example-transform-2:hover {
+                transform: scale(2, 0.5);
+            }
+
+            #example-transform-3:hover {
+                transform: rotate(0.5turn);
+            }
+
+            #example-transform-4:hover {
+                transform: skew(30deg, 20deg);
+            }
+
+            #example-transform-5:hover {
+                transform: matrix(1, 0, 0, 1, 100, 50);
+            }
+
+            #example-transform-6:hover {
+                transform: translate(200px) rotate(1turn);
+            }
+
+            #example-transform-7:hover {
+                transform: rotate(1turn) translate(200px);
+            }
+
+            // example 2.9 transition
+
+            #example-transition-1 {
+                width: 100px;
+                height: 100px;
+                background-color: red;
+                transition: width 2s, height 2s, background-color 2s;
+            }
+
+            #example-transition-1:hover {
+                width: 300px;
+                height: 150px;
+                background-color: blue;
+            }
+
+            // example 2.10 animation
+
+            @keyframes rotateACWThenCW {
+                from {
+                    transform: rotate(0deg);
+                }
+                25% {
+                    transform: rotate(-45deg);
+                }
+                to {
+                    transform: rotate(360deg);
+                }
+            }
+
+            @keyframes rotateCW {
+                from {
+                    transform: rotate(0deg);
+                }
+                to {
+                    transform: rotate(360deg);
+                }
+            }
+
+            #example-animation-1, #example-animation-2 {
+                width: 100px;
+                height: 100px;
+                background-color: red;
+            }
+
+            #example-animation-1:hover {
+                animation-name: rotateACWThenCW;
+                animation-duration: 2s;
+            }
+
+            #example-animation-2:hover {
+                animation-name: rotateCW;
+                animation-duration: 2s;
+                animation-iteration-count: 2, 0, infinite;
+            }
+
+            // exmaple 2.13 flexbox
+            .example-flex-1, .example-flex-2, .example-flex-3, .example-flex-4, .example-flex-5, .example-flex-6, .example-flex-7, .example-flex-8, .example-flex-9, .example-flex-10, .example-flex-11, .example-flex-12, .example-flex-13 {
+                display: flex;
+                border: solid black 5px;
+                color: #FFF;
+                height: 100px;
+
+                .sub-1 {
+                    background-color: red;
+                }
+
+                .sub-2 {
+                    background-color: green;
+                }
+
+                .sub-3 {
+                    background-color: blue;
+                }
+            }
+
+            .example-flex-2 {
+                justify-content: flex-end;
+            }
+
+            .example-flex-3 {
+                justify-content: space-between;
+            }
+
+            .example-flex-4 {
+                justify-content: space-around;
+            }
+
+            .example-flex-5 {
+                justify-content: space-evenly;
+            }
+
+            .example-flex-6 {
+                justify-content: stretch;
+            }
+
+            .example-flex-7, .example-flex-8, .example-flex-9, .example-flex-10, .example-flex-11 {
+                .sub-1 {
+                    height: 50px;
+                }
+
+                .sub-3 {
+                    height: 75px;
+                }
+            }
+
+            .example-flex-7 {
+                align-items: flex-start;
+            }
+
+            .example-flex-8 {
+                align-items: flex-end;
+            }
+
+            .example-flex-9 {
+                align-items: center;
+            }
+
+            .example-flex-11 {
+                align-items: baseline;
+
+                .sub-1 {
+                    padding-top: 10px;
+                }
+
+                .sub-3 {
+                    padding-top: 20px;
+                }
+            }
+
+            .example-flex-12 {
+                .sub-1 {
+                    align-self: flex-end;
+                }
+            }
+
+            .example-flex-13 {
+                flex-wrap: wrap;
+                align-content: space-around;
+
+                .sub-1, .sub-2, .sub-3 {
+                    flex-basis: 45%;
+                }
+            }
+
+            // example 2.14 float
+            .example-float-1, .example-float-2 {
+                width: 100px;
+                height: 100px;
+                background-color: red;
+            }
+
+            .example-float-2 {
+                float: left;
+            }
+
+            .example-float-3, .example-float-4 {
+                border: 3px black solid;
+
+                .example-sub {
+                    width: 100px;
+                    height: 100px;
+                    background-color: red;
+                    float: left;
+                }
+            }
+
+            .example-float-4::after {
+                content: "";
+                display: block;
+                clear: left;
+            }
+
+        }
+
+        // exmaple 2.12 srpites
+
+        .img-sprites-1 {
+            background: url('../../public/img/example-sprites.png') no-repeat;
+            background-size: contain;
+            height: 115px;
+            width: 100%;
+        }
+
+        .example-sprites-split {
+            background: url('../../public/img/example-sprites.png') no-repeat;
+            height: 50px;
+            width: 50px;
+        }
+
+        #example-sprites-google-plus {
+            background-position: -25px -20px;
+        }
+
+        #example-sprites-facebook {
+            background-position: -160px -20px;
+        }
+
+        #example-sprites-twitter {
+            background-position: -680px -20px;
+        }
+
+        // 2.16 multi-column layout
+
+        .example-mcl-1 {
+            color: white;
+            height: 300px;
+
+            .left, .right {
+                height: 90%;
+            }
+
+            .left {
+                float: left;
+                width: 150px;
+                background-color: red;
+            }
+
+            .right {
+                margin-left: 160px;
+                background-color: blue;
+            }
+        }
+
+        .example-mcl-2 {
+            color: white;
+            height: 300px;
+
+            .left, .middle, .right {
+                height: 90%;
+            }
+
+            .left {
+                float: left;
+                width: 150px;
+                background-color: red;
+            }
+
+            .right {
+                float: right;
+                width: 150px;
+                background-color: red;
+            }
+
+            .middle {
+                margin-left: 160px;
+                margin-right: 160px;
+                background-color: blue;
+            }
+        }
+        
+        // 2.17 centering
+
+        .example-centering-1, .example-centering-2, .example-centering-3, .example-centering-4, .example-centering-5 {
+            height: 300px;
+
+            .example-sub {
+                width: 100px;
+                height: 100px;
+                background-color: red;
+            }
+        }
+
+        .example-centering-1 {
+            .example-sub {
+                margin: 0 auto;
+            }
+        }
+
+        .example-centering-2 {
+            position: relative;
+
+            .example-sub {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+
+        .example-centering-3 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .example-centering-4 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .example-sub-text {
+                width: 200px;
+            }
+        }
+
+        // end of example code styles
+
+        table {
+            border-collapse: collapse;
+
+            tr:nth-child(even) {
+                background-color: #f2f2f2;
+            }
+            
+            th {
+                white-space: nowrap;
+                padding: 0 20px;
+            }
+
+            th, td {
+                font-size: 70%;
+                padding: 8px;
+                border: 1px solid #ddd;
+            }
+        }
+
+        pre {
+            font-size: 85%;
+            background-color: #F0F0F0;
+            padding: 20px 40px;
+            border-radius: 10px;
+            overflow-x: scroll;
+        }
+
+        .loading-screen {
+            width: 70%;
+            background: url('../../public/img/loading.gif') no-repeat;
+            background-size: 30px 30px;
+            background-position: center;
+            height: 100vh;
+        }
+
+        .text-display {
+            width: 70%;
+            
+            #back-to-top {
+                position: fixed;
+                width: 75px;
+                height: 75px;
+                background-color: white;
+                border: 1px #EEE solid;
+                box-shadow: #BBB 3px 3px 10px;
+                top: 90vh;
+                left: 65.95%;
+                cursor: pointer;
+
+                p {
+                    color: #888;
+                    text-align: center;
+                    font-weight: 700;
+                }
+            }
+        }
+
+        ul {
+            list-style-type: circle;
+
+            li {
+                margin-bottom: 20px;
+            }
+        }
+
+        .date-IFE {
+            font-size: 80%;
+            color: #555;
+            margin-top: 0;
+            margin-bottom: 2%;
+        }
+
+        .title-IFE {
+            margin-bottom: 1%;
+        }
+    }
+}

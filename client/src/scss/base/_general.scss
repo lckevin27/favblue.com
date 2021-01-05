@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Meddon&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200;300;400;500;600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $main-font, sans-serif;
+    font-size: 16px;
+    margin: 0;
+
+    a {
+        text-decoration: none;
+        color: $logo-blue;
+        font-weight: 700;
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    code {
+        background-color: #f0f0f7;
+        color: #DD1144;
+    }
+
+    .logo {
+        font-family: $logo-font, sans-serif;
+        color: $logo-blue;
+    }
+}

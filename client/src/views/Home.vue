@@ -20,7 +20,7 @@ export default {
     return {
       mainText: 'Hi, I am favblue.',
       subTexts: [
-        'I am a web developer and technical blogger.',
+        'A web developer and technical blogger.',
         'I also do video tutorials.'
       ]
     }

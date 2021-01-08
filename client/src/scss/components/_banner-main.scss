@@ -44,4 +44,20 @@
 			}
 		}
 	}
+
+	@media only screen and (max-width: 580px) {
+		.hero-text {
+			p.main-text {
+				font-size: 400%;
+			}
+		}
+	}
+
+	@media only screen and (max-width: 480px) {
+		.hero-text {
+			p.main-text {
+				font-size: 300%;
+			}
+		}
+	}
 }

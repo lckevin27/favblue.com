@@ -72,7 +72,7 @@
   }
 
   @media only screen and (max-width: 1480px) {
-    padding: 8% 10%;
+    padding: 10%;
   }
 
   @media only screen and (max-width: 1000px) {
@@ -85,6 +85,33 @@
 
       &> div:first-child {
         margin-bottom: 10%;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 870px) {
+    .title-wrap {
+      h2 {
+        letter-spacing: 5px;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    .title-wrap {
+      margin-bottom: 15px;
+
+      h2 {
+        letter-spacing: 2px;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 480px) {
+    .title-wrap {
+      h2 {
+        letter-spacing: 1px;
+        font-size: 150%;
       }
     }
   }

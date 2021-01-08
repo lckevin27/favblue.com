@@ -23,5 +23,15 @@
 		.text-section {
 			padding: 80px 10%;
 		}
-  }
+	}
+	
+	@media only screen and (max-width: 480px) {
+		.text-section {
+			padding: 10%;
+
+			p {
+				margin: 10px 0;
+			}	
+		}
+	}
 }

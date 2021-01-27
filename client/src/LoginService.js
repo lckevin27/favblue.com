@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const baseURL = '/loginAPI/'
+const baseURL = '/api/loginAPI/'
 
 class LoginService {
   static async login (loginData) {

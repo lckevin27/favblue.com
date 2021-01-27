@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const url = '/IFE/'
+const url = '/api/IFE/'
 
 /* eslint-disable no-async-promise-executor */
 /* eslint-disable func-call-spacing */

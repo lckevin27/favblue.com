@@ -3,6 +3,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var history = require('connect-history-api-fallback');
 var cors = require('cors');
 
 var indexRouter = require('./routes/index');
@@ -25,7 +26,9 @@ app.use(require('express-session')({
 app.use(passport.initialize());
 app.use(passport.session());
 
-app.use('/', indexRouter);
+app.use(history());
+app.use('/api', indexRouter);
+app.use(express.static(path.join(__dirname, 'public')));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -46,7 +49,11 @@ app.use(function(err, req, res, next) {
 
   // render the error page
   res.status(err.status || 500);
-  res.render('error');
+  res.send('error');
 });
+
+app.listen(8080,() => {
+    console.log('app listening on port 80.')
+})
 
 module.exports = app;

@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const url = 'http://localhost:3000/IFE/'
+const url = '/IFE/'
 
 /* eslint-disable no-async-promise-executor */
 /* eslint-disable func-call-spacing */
@@ -24,7 +24,7 @@ class PostServiceIFE {
   static getPost (targetURL) {
     return new Promise (async (resolve, reject) => {
       try {
-        const res = await axios.get(targetURL)
+        const res = await axios.get(`${url}${targetURL}`)
         const data = res.data[0]
 
         resolve (

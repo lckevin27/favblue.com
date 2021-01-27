@@ -60,7 +60,6 @@ export default {
       posts: [],
       displaying: '',
       error: '',
-      targetURL: 'http://localhost:3000/IFE/',
       showHTML: true,
       showCSS: true,
       showJS: true,
@@ -76,7 +75,7 @@ export default {
     loadToScreen: async function (url) {
       try {
         this.displaying = 'loading'
-        this.displaying = await PostServiceIFE.getPost(`${this.targetURL}${url}`)
+        this.displaying = await PostServiceIFE.getPost(`${url}`)
       } catch (err) {
         this.error = err
       }

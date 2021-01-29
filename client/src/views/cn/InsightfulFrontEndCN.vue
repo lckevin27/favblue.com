@@ -27,13 +27,13 @@
     <div class="IFEContent">
       <div v-if="displaying === 'loading'" class="loading-screen">
       </div>
-      <Editor v-if="displaying === 'editing'" v-bind:toEdit="toEdit"></Editor>
+      <Editor v-else-if="displaying === 'editing'" v-bind:toEdit="toEdit"></Editor>
       <div class="text-display" v-else>
         <h3 class="title-IFE">{{ displaying.num }} - {{ displaying.title }}</h3>
         <p class="date-IFE">最后更新于 {{ `${(new Date(displaying.createdAt)).getFullYear()} 年 ${(new Date(displaying.createdAt)).getMonth() + 1} 月` }}</p>
         <p v-html="displaying.text"></p>
         <div id="back-to-top" v-on:click="backToTop">
-          <p>TOP</p>
+          <p>▲</p>
         </div>
       </div>
     </div>
@@ -88,7 +88,8 @@ export default {
       this.toEdit = post
     },
     backToTop: function () {
-      window.scrollTo(0, 0)
+      const contentWindow = document.getElementsByClassName('IFEContent')[0]
+      contentWindow.scrollTo(0, 0)
     }
   },
   async created () {

@@ -471,15 +471,19 @@
                 position: fixed;
                 width: 75px;
                 height: 75px;
-                background-color: white;
-                border: 1px #EEE solid;
-                box-shadow: #BBB 3px 3px 10px;
+                background-color: #FFF;
+                border: 3px #414983 solid;
+                border-radius: 50%;
+                box-shadow: #777 3px 3px 10px;
                 top: 90vh;
                 left: 65.95%;
                 cursor: pointer;
+                display: flex;
+                justify-content: center;
+                align-items: center;
 
                 p {
-                    color: #888;
+                    color: #414983;
                     text-align: center;
                     font-weight: 700;
                 }

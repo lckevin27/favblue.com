@@ -17,4 +17,23 @@ footer {
             margin: 0 20px;
         }
     }
+
+    @keyframes focusThenFade {
+        from {
+            border: red 3px solid;
+        }
+
+        70% {
+            border-color: #FFF;
+        }
+
+        to {
+            border: none;
+        }
+    }
+
+    #contact-email:focus {
+        padding: 10px;
+        animation: focusThenFade 5s ease-in;
+    }
 }

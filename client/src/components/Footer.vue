@@ -6,7 +6,7 @@
             <a href="#"><img src="../../public/img/icons/youtube-colored.png"></a>
             <a href="#"><img src="../../public/img/icons/bilibili-colored.png"></a>
         </div>
-        <a target="_blank" href="mailto:me@favblue.com">me@favblue.com</a>
+        <a id="contact-email" target="_blank" href="mailto:me@favblue.com">me@favblue.com</a>
     </footer>
 </template>
 

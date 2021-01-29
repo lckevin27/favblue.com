@@ -70,8 +70,9 @@ export default {
   methods: {
     gotoFooter () {
       document.getElementsByClassName('side-nav')[0].style.width = '0px'
-      const footer = document.getElementById('footer-logo')
-      footer.scrollIntoView()
+      const contact = document.getElementById('contact-email')
+      contact.scrollIntoView()
+      contact.focus()
     },
     openNav () {
       document.getElementsByClassName('side-nav')[0].style.width = '400px'

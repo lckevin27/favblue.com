@@ -33,7 +33,7 @@ const routes = [
     }
   },
   {
-    path: '/cn/ife',
+    path: '/ife',
     name: 'InsightfulFrontEndCN',
     component: InsightfulFrontEndCN,
     meta: {

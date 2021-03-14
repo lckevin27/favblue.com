@@ -36,6 +36,10 @@ body {
 		color: $logo-blue;
 	}
 
+	.disabled {
+		cursor: not-allowed;
+	}
+
   @media only screen and (max-width: 1000px) {
 		font-size: 14px;
 	}

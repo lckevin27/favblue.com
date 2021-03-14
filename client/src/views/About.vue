@@ -3,9 +3,16 @@
     <BannerMain v-bind:mainText="mainText" v-bind:subTexts="subTexts" />
     <div class="text-section">
       <h2>About Me</h2>
-      <p>I am a web developer from Shenzhen, China and currently live and work in Perth, Australia.</p>
-      <p>The <router-link to="/ife">Insightful Front-End Program</router-link> was inspired by a series of popular interview questions that posted by tech giants' interviewees as I was preparing for my own. I was thinking that these questions were asked frequently because they were important skills or knowledges that every front-end developer should master. So why don't I just use these points as the core and integrate essential knowledges into a series of tutorials that come salong with videos that can help other learners to better understand front-end development?</p>
-      <p>If you are coming for the program, I hope you have a great experience learning with it. If you have any advices for me, please do not hesitate to contact me. Enjoy!</p>
+      <p>I am a Web Developer/Software Engineer with more than 3 years of experience who live and work in Perth, Australia.</p>
+      <p>Besides work, I am also a freelancer of building websites for a couple of companies and my self interests using frameworks such as React.JS and Vue.JS along with Node.JS Back-End, and also deeply involved in projects that used React-Native for mobile development.</p>
+      <p>If you have any requirements of having a personal website, a website to promote your business or company, mobile apps for iOS or/and Android, or even a whole system of business involving all the products mentioned above which can interact with each other, please feel free to contact me by <a id="contact-email" target="_blank" href="mailto:me@kevin27.cl@gmail.com">kevin27.cl@gmail.com</a>.</p>
+      <p><strong>Some of my work:</strong>
+        <ul>
+          <li><a href="http://chuanwudashi.com">Traditional Wushu Masters | 传武大师</a></li>
+          <li><a href="http://jmaxwell.com.au">Jmaxwell Pty Ltd</a></li>
+          <li><a href="http://favblue.com:8888">United Funds</a></li>
+        </ul>
+      </p>
     </div>
   </div>
 </template>

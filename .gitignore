@@ -2,6 +2,7 @@ node_modules
 .DS_Store
 
 /server/routes/index.js
+/server/public
 
 /client/node_modules
 /client/dist
